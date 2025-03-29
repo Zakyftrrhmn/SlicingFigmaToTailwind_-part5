@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-backNavbar: #f7f7f7;
+  --color-primary: #f49301;
+  --color-linear-to: #ffc889;
+  --color-text-primary: #1e1e1e;
+  --color-text-secondary: #434343;
+  --color-text-tertiary: #757575;
+
+  --inset-shadow-bg: -10px -3px 0 0 #fff;
+  --inset-shadow-bottom-bg: -15px -15px 0 0 #fff;
+}

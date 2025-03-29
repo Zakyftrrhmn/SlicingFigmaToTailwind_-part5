@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Layanan Desa</title>
+  </head>
+  <body class="font-inter">
+    <!-- Navbar -->
+    <nav
+      class="px-6 md:px-14 py-5 md:py-7"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div
+        class="px-6 md:px-10 py-4 flex justify-between items-center bg-backNavbar rounded-full border border-[#1E1E1E]/20"
+      >
+        <!-- Logo -->
+        <div class="w-28 md:w-32 h-8 md:h-10">
+          <img
+            src="./assets/logo.png"
+            alt="Logo Desa"
+            class="w-full h-full object-contain"
+          />
+        </div>
+
+        <!-- Menu untuk Desktop -->
+        <ul
+          class="hidden md:flex items-center md:gap-x-8 text-sm font-medium text-gray-700"
+        >
+          <li>
+            <a href="#" class="hover:text-primary transition-all duration-300"
+              >Beranda</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-primary transition-all duration-300"
+              >Tentang Desa</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-primary transition-all duration-300"
+              >Statistik Desa</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-primary transition-all duration-300"
+              >Kabar Desa</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-primary transition-all duration-300"
+              >Kontak</a
+            >
+          </li>
+        </ul>
+
+        <!-- Button dan Hamburger Menu -->
+        <div class="flex items-center gap-4">
+          <button
+            class="hidden md:block px-6 md:px-10 py-1 border border-primary text-primary rounded-full transition-all duration-300 hover:bg-primary hover:text-white"
+          >
+            Masuk
+          </button>
+
+          <!-- Hamburger Menu (Mobile) -->
+          <button class="md:hidden block text-gray-700" onclick="menuToggle()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="absolute top-28 w-full left-0 px-6 md:hidden hidden menuDropdown z-999"
+        >
+          <ul
+            class="px-6 py-5 flex flex-col gap-y-3 bg-backNavbar rounded-xl border border-[#1E1E1E]/20 menuDropdown"
+          >
+            <li
+              class="py-2 px-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <a href="#">Beranda</a>
+            </li>
+            <li
+              class="py-2 px-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <a href="#">Tentang Desa</a>
+            </li>
+            <li
+              class="py-2 px-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <a href="#">Statistik Desa</a>
+            </li>
+            <li
+              class="py-2 px-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <a href="#">Kabar Desa</a>
+            </li>
+            <li
+              class="py-2 px-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <a href="#">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="px-6 md:px-14"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    >
+      <div class="relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="inset-0">
+          <img
+            src="assets/background.png"
+            alt=""
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+
+        <!-- Content -->
+        <div
+          class="absolute top-0 left-0 px-6 py-5 bg-white w-fit rounded-br-lg max-w-1/2 z-20"
+        >
+          <!-- bulatan 1 -->
+          <div
+            class="w-10 h-10 rounded-full bg-transparent absolute top-0 -right-9 inset-shadow-bg"
+          ></div>
+
+          <!-- content -->
+          <div class="lg:mt-10 lg:mb-20 lg:mr-20">
+            <h1 class="text-lg md:text-3xl lg:text-4xl font-bold text-primary">
+              Layanan Desa Cepat
+            </h1>
+            <h1 class="text-lg md:text-3xl lg:text-4xl font-bold text-black">
+              Tanpa Ribet!
+            </h1>
+            <p class="text-sm md:text-md lg:text-md mt-1 text-gray-500">
+              Cukup klik, urusan selesai. Warga happy, desa maju!
+            </p>
+            <button
+              class="rounded-full py-2 px-3 bg-gradient-to-r from-primary to-linear-to text-white font-semibold text-xs md:text-lg hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 cursor-pointer w-fit mt-2 lg:mt-5"
+            >
+              Lihat Layanan
+            </button>
+          </div>
+
+          <!-- bulatan 2 -->
+          <div
+            class="w-10 h-10 rounded-full bg-transparent absolute -bottom-9 left-0 inset-shadow-bottom-bg"
+          ></div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="absolute bottom-0 w-full py-2 px-4 md:px-8 lg:px-14 z-200">
+          <div
+            class="py-2 px-2 md:py-4 md:px-8 lg:py-6 lg:px-12 bg-[#393939]/80 flex justify-between items-center w-full rounded-lg"
+          >
+            <div class="flex flex-col gap-y-1 md:gap-y-2 items-center w-fit">
+              <h5 class="font-bold text-white text-md">500+</h5>
+              <p class="font-semibold text-white text-sm">Kepala Keluarga</p>
+            </div>
+            <div class="w-0.5 h-10 bg-white/20"></div>
+            <div class="flex flex-col gap-y-1 md:gap-y-2 items-center w-fit">
+              <h5 class="font-bold text-white text-md">20+</h5>
+              <p class="font-semibold text-white text-sm">Penghargaan Desa</p>
+            </div>
+            <div class="w-0.5 h-10 bg-white/20"></div>
+            <div class="flex flex-col gap-y-1 md:gap-y-2 items-center w-fit">
+              <h5 class="font-bold text-white text-md">10+</h5>
+              <p class="font-semibold text-white text-sm">Fasilitas Desa</p>
+            </div>
+            <div class="w-0.5 h-10 bg-white/20"></div>
+            <div class="flex flex-col gap-y-1 md:gap-y-2 items-center w-fit">
+              <h5 class="font-bold text-white text-md">5+</h5>
+              <p class="font-semibold text-white text-sm">BUMDes Aktif</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foreground Image (Eraser Background) -->
+        <div class="absolute z-100 top-0 w-full h-auto pointer-events-none">
+          <img src="assets/eraserBackground.png" class="w-full h-auto" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sejarah Section -->
+    <section class="px-6 md:px-14 py-10 mt-25">
+      <!-- Judul Section -->
+      <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+          Tentang Desa
+        </h2>
+        <p class="text-gray-500 mt-2 text-sm md:text-lg">
+          Kenal lebih dekat dengan desa kami dari sejarah sampai prestasi yang
+          pernah diraih
+        </p>
+      </div>
+
+      <!-- Tabs Menu -->
+      <div
+        class="bg-gray-300 px-2 py-1.5 rounded-full w-fit mx-auto mt-5"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="flex flex-wrap justify-center gap-2 md:gap-3 items-center">
+          <a
+            class="text-sm md:text-base px-4 md:px-6 py-2 bg-gradient-to-r from-primary to-linear-to rounded-full hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 font-semibold text-white cursor-pointer"
+          >
+            Sejarah
+          </a>
+          <a
+            class="text-sm md:text-base px-4 md:px-6 py-2 rounded-full hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 font-semibold text-white cursor-pointer"
+          >
+            Visi Misi
+          </a>
+          <a
+            class="text-sm md:text-base px-4 md:px-6 py-2 rounded-full hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 font-semibold text-white cursor-pointer"
+          >
+            Fasilitas
+          </a>
+          <a
+            class="text-sm md:text-base px-4 md:px-6 py-2 rounded-full hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 font-semibold text-white cursor-pointer"
+          >
+            Prestasi
+          </a>
+          <a
+            class="text-sm md:text-base px-4 md:px-6 py-2 rounded-full hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 font-semibold text-white cursor-pointer"
+          >
+            Layanan
+          </a>
+          <a
+            class="text-sm md:text-base px-4 md:px-6 py-2 rounded-full hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 font-semibold text-white cursor-pointer"
+          >
+            Lokasi
+          </a>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mt-10 items-center">
+        <!-- Gambar -->
+        <div
+          class="col-span-12 md:col-span-5 w-100 h-auto mx-auto order-2 md:order-1"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <img
+            src="assets/visimisi.png"
+            alt="Sejarah Desa"
+            class="w-full rounded-lg"
+          />
+        </div>
+
+        <!-- Text Sejarah -->
+        <div
+          class="col-span-12 md:col-span-7 items-start order-1 md:order-2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h3 class="text-2xl md:text-4xl font-bold text-text-primary">
+            Sejarah Desa Kami
+          </h3>
+          <p class="text-text-tertiary text-justify text-sm mt-4 md:text-md">
+            At PrimeNest, we simplify the home-buying process. Explore our
+            extensive listings, tailored to your preferences, and receive expert
+            guidance from our dedicated team. At PrimeNest, we simplify the
+            home-buying process. Explore our extensive listings, tailored to
+            your preferences, and receive expert guidance from our dedicated
+            team.
+          </p>
+
+          <!-- Timeline -->
+          <div class="mx-auto mt-10 w-100">
+            <img src="assets/Timeline.png" class="w-full object-cover" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistik Section -->
+    <section class="px-6 md:px-14 mt-25">
+      <div class="grid grid-cols-12 place-items-center">
+        <!-- content -->
+        <div
+          class="col-span-12 md:col-span-7 flex flex-col gap-y-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="flex flex-col gap-y-2">
+            <h1 class="text-4xl font-bold text-primary">
+              Sekilas Statistik Desa
+            </h1>
+            <p class="text-sm text-justify text-text-tertiary">
+              Statistik mencakup data seperti total penduduk, umur, gender,
+              pendidikan, perkawinan, nikah, agama, dan kesehatan.
+            </p>
+          </div>
+          <div class="flex items-center gap-4 flex-wrap">
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Jumlah Penduduk
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total penduduk desa keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Jumlah Penduduk
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total penduduk desa keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Jumlah Penduduk
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total penduduk desa keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Jumlah Penduduk
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total penduduk desa keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Jumlah Penduduk
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total penduduk desa keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+          </div>
+          <button
+            class="w-fit text-primary px-2 py-1 border border-primary rounded-full text-md font-semibold hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 cursor-pointer hover:text-white"
+          >
+            Lihat Selengkapnya ->
+          </button>
+        </div>
+
+        <!-- image -->
+        <div
+          class="col-span-12 md:col-span-5"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="flex justify-center mx-auto w-100 h-100">
+            <img src="assets/Image Home.png" alt="" class="w-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bank Desa Section -->
+    <section class="px-6 md:px-14 mt-25">
+      <div class="grid grid-cols-12 place-items-center">
+        <!-- content -->
+        <div
+          class="col-span-12 md:col-span-7 flex flex-col gap-y-4 order-2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="flex flex-col gap-y-2">
+            <h1 class="text-4xl font-bold text-primary">Bank Desa</h1>
+            <p class="text-sm text-justify text-text-tertiary">
+              Transparansi Keuangan Desa mencakup data seperti total anggaran,
+              pemasukan, pengeluaran, dan rincian penggunaan dana.
+            </p>
+          </div>
+          <div class="flex items-center gap-4 flex-wrap">
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Total Anggaran
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total anggaran keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Total Anggaran
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total anggaran keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Total Anggaran
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total anggaran keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Total Anggaran
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total anggaran keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+
+            <!-- card -->
+            <div
+              class="flex flex-col gap-y-8 w-30 bg-primary px-2 py-2 rounded-2xl"
+            >
+              <i class="fa-solid fa-house-user text-2xl text-white"></i>
+              <div class="flex flex-col gap-y-4">
+                <div>
+                  <h6 class="text-xs font-semibold text-white">
+                    Total Anggaran
+                  </h6>
+                  <p class="text-[8px] text-white">
+                    Menampilkan total anggaran keseluruhan
+                  </p>
+                </div>
+                <i class="fa-solid fa-hand-sparkles text-xl text-white"></i>
+              </div>
+            </div>
+          </div>
+          <button
+            class="w-fit text-primary px-2 py-1 border border-primary rounded-full text-md font-semibold hover:bg-gradient-to-l hover:from-linear-to hover:to-primary transition duration-500 cursor-pointer hover:text-white"
+          >
+            Lihat Selengkapnya ->
+          </button>
+        </div>
+
+        <!-- image -->
+        <div
+          class="col-span-12 md:col-span-5 order-1"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="flex justify-center mx-auto w-100 h-100">
+            <img src="assets/Image Home (1).png" alt="" class="w-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Badan Usaha Section -->
+    <section class="px-6 md:px-14 mt-25">
+      <div class="container mx-auto text-center">
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="text-4xl font-bold text-primary mb-4">
+            Badan Usaha Milik Desa
+          </h2>
+          <p class="text-gray-600 mb-10">
+            Temukan berbagai layanan dan produk yang ditawarkan oleh BUMDes
+            kami, yang bertujuan untuk mendukung perkembangan ekonomi dan
+            kesejahteraan desa.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <img
+              src="assets/Gambar 1.png"
+              alt="Card Image"
+              class="w-full h-100 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <div
+                class="p-8 rounded-2xl bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-between"
+              >
+                <div class="flex flex-col gap-y-1 items-start">
+                  <h3 class="text-lg font-bold text-primary">
+                    Lembaga Perantara
+                  </h3>
+                  <p class="text-gray-700 text-start">Menjual produk lokal.</p>
+                </div>
+
+                <a
+                  href="#"
+                  class="text-primary inline-flex items-center mt-2 font-extrabold w-10 h-10 border border-primary rounded-full justify-center"
+                >
+                  ->
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <img
+              src="assets/Gambar 2.png"
+              alt="Card Image"
+              class="w-full h-100 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <div
+                class="p-8 rounded-2xl bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-between"
+              >
+                <div class="flex flex-col gap-y-1 items-start">
+                  <h3 class="text-lg font-bold text-primary">Layanan Ketiga</h3>
+                  <p class="text-gray-700">Deskripsi layanan ketiga.</p>
+                </div>
+
+                <a
+                  href="#"
+                  class="text-primary inline-flex items-center mt-2 font-extrabold w-10 h-10 border border-primary rounded-full justify-center"
+                >
+                  ->
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <img
+              src="assets/Gambar 3.png"
+              alt="Card Image"
+              class="w-full h-100 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 w-full p-4">
+              <div
+                class="p-8 rounded-2xl bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-between"
+              >
+                <div class="flex flex-col gap-y-1 items-start">
+                  <h3 class="text-lg font-bold text-primary">Layanan Ketiga</h3>
+                  <p class="text-gray-700">Deskripsi layanan ketiga.</p>
+                </div>
+
+                <a
+                  href="#"
+                  class="text-primary inline-flex items-center mt-2 font-extrabold w-10 h-10 border border-primary rounded-full justify-center"
+                >
+                  ->
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Berita Artikel Section -->
+    <section
+      class="px-6 md:px-14 mt-16"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="text-center mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-primary">
+          Berita & Artikel Desa
+        </h1>
+        <p class="text-sm md:text-base text-text-tertiary mt-2">
+          Cari tahu informasi terbaru seputar desa dan artikel insightful buat
+          kamu.
+        </p>
+      </div>
+
+      <div class="container mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-primary rounded-xl p-6 items-center"
+        >
+          <div class="md:col-span-1">
+            <img
+              src="assets/tranding.png"
+              alt="Trending"
+              class="object-cover w-full rounded-xl"
+            />
+          </div>
+          <div
+            class="md:col-span-2 text-white flex flex-col gap-4 justify-between h-full"
+          >
+            <div class="flex items-center gap-4">
+              <img src="assets/Up.png" alt="Trending" class="w-8 h-8" />
+              <span class="text-lg">Trending</span>
+            </div>
+            <div class="flex flex-col gap-y-4">
+              <h2 class="text-xl md:text-4xl font-bold">
+                3 Tips Kelola Uang Melalui Website
+              </h2>
+              <p class="text-sm md:text-base">
+                Reference site about Lorem Ipsum, giving information on its
+                origins, as well as a random Lipsum generator.
+              </p>
+            </div>
+            <button
+              class="mt-2 px-4 py-2 border border-white text-white rounded-full w-fit hover:bg-white hover:text-primary transition cursor-pointer"
+            >
+              Baca Selengkapnya →
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          <!-- Card -->
+          <div
+            class="bg-primary rounded-2xl p-6 flex flex-col gap-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="w-full h-40 rounded-full">
+              <img
+                src="assets/Berita1.png"
+                alt="Berita"
+                class="w-full h-full rounded-lg object-cover"
+              />
+            </div>
+
+            <h3 class="text-lg font-bold text-white">
+              Penyaluran Bantuan Sosial
+            </h3>
+            <p class="text-xs md:text-sm text-white">
+              Reference site about Lorem Ipsum, giving information on its
+              origins, as well as a random Lipsum generator.
+            </p>
+            <button
+              class="text-white text-sm border border-white px-4 py-2 rounded-full w-fit hover:bg-white hover:text-primary transition cursor-pointer"
+            >
+              Baca Selengkapnya →
+            </button>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-primary rounded-2xl p-6 flex flex-col gap-4"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <div class="w-full h-40 rounded-full">
+              <img
+                src="assets/Berita2.png"
+                alt="Berita"
+                class="w-full h-full rounded-lg object-cover"
+              />
+            </div>
+            <h3 class="text-lg font-bold text-white">
+              Gerakan Bersama Dengan Mahasiswa
+            </h3>
+            <p class="text-xs md:text-sm text-white">
+              Reference site about Lorem Ipsum, giving information on its
+              origins, as well as a random Lipsum generator.
+            </p>
+            <button
+              class="text-white text-sm border border-white px-4 py-2 rounded-full w-fit hover:bg-white hover:text-primary transition cursor-pointer"
+            >
+              Baca Selengkapnya →
+            </button>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="bg-primary rounded-2xl p-6 flex flex-col gap-4"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <div class="w-full h-40 rounded-full">
+              <img
+                src="assets/Berita3.png"
+                alt="Berita"
+                class="w-full h-full rounded-lg object-cover"
+              />
+            </div>
+            <h3 class="text-lg font-bold text-white">Pameran Seni</h3>
+            <p class="text-xs md:text-sm text-white">
+              Reference site about Lorem Ipsum, giving information on its
+              origins, as well as a random Lipsum generator.
+            </p>
+            <button
+              class="text-white text-sm border border-white px-4 py-2 rounded-full w-fit hover:bg-white hover:text-primary transition cursor-pointer"
+            >
+              Baca Selengkapnya →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full text-center">
+        <button
+          class="mt-2 px-4 py-2 border border-primary text-primary rounded-full w-fit hover:bg-white transition cursor-pointer"
+        >
+          Baca Selengkapnya →
+        </button>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="px-6 md:px-14 mt-16 mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+        Pertanyaan Yang Sering Diajukan
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- FAQ Section -->
+        <div class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
+          <div class="bg-white p-4 rounded-lg shadow">
+            <button
+              class="flex justify-between items-center w-full font-semibold text-gray-900"
+              onclick="toggleFaq(0)"
+            >
+              Bagaimana cara mengajukan surat keterangan?
+              <span id="icon-0" class="text-xl">+</span>
+            </button>
+            <p id="answer-0" class="text-gray-600 mt-2 hidden">
+              Anda dapat dengan mudah mengajukan permohonan melalui website kami
+              dengan memilih properti yang Anda minati dan memilih slot waktu
+              yang tersedia.
+            </p>
+          </div>
+
+          <div class="bg-white p-4 rounded-lg shadow">
+            <button
+              class="flex justify-between items-center w-full font-semibold text-gray-900"
+              onclick="toggleFaq(1)"
+            >
+              Apa saja syarat untuk mendapatkan bantuan sosial?
+              <span id="icon-1" class="text-xl">+</span>
+            </button>
+            <p id="answer-1" class="text-gray-600 mt-2 hidden">
+              Syaratnya meliputi status kependudukan, penghasilan di bawah batas
+              tertentu, dan memenuhi kriteria lain yang ditetapkan oleh
+              pemerintah.
+            </p>
+          </div>
+
+          <div class="bg-white p-4 rounded-lg shadow">
+            <button
+              class="flex justify-between items-center w-full font-semibold text-gray-900"
+              onclick="toggleFaq(2)"
+            >
+              Bagaimana cara melaporkan pengaduan warga?
+              <span id="icon-2" class="text-xl">+</span>
+            </button>
+            <p id="answer-2" class="text-gray-600 mt-2 hidden">
+              Anda bisa melaporkan melalui aplikasi pengaduan online atau datang
+              langsung ke kantor desa setempat.
+            </p>
+          </div>
+
+          <div class="bg-white p-4 rounded-lg shadow">
+            <button
+              class="flex justify-between items-center w-full font-semibold text-gray-900"
+              onclick="toggleFaq(3)"
+            >
+              Di mana saya bisa melihat laporan keuangan desa?
+              <span id="icon-3" class="text-xl">+</span>
+            </button>
+            <p id="answer-3" class="text-gray-600 mt-2 hidden">
+              Laporan keuangan desa bisa diakses melalui website resmi desa atau
+              papan pengumuman kantor desa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Gambar & Call to Action -->
+        <div class="relative h-100" data-aos="fade-up" data-aos-duration="1000">
+          <img
+            src="assets/faq.png"
+            alt="Orang bertanya"
+            class="rounded-lg h-full w-full"
+          />
+          <div
+            class="absolute bottom-0 left-0 bg-black/50 text-white p-8 rounded-lg flex justify-between w-full"
+          >
+            <span>Ada pertanyaan lain?</span>
+            <button class="bg-orange-500 px-4 py-1 rounded text-white">
+              Tanya Kami
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tawaran Section -->
+    <section class="px-6 md:px-14 mt-16 mx-auto">
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <!-- Gambar -->
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <img
+            src="assets/tawaran.png"
+            alt="Layanan Desa"
+            class="rounded-lg w-full"
+          />
+        </div>
+
+        <!-- Teks & Tombol -->
+        <div
+          class="bg-gradient-to-b from-white to-orange-100 p-6 rounded-lg"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Siap Mengakses Layanan Desa?
+          </h2>
+          <p class="text-gray-700 mb-6">
+            Akses berbagai layanan desa dengan mudah melalui website kami. Tim
+            kami siap membantu Anda untuk kebutuhan administrasi, pengaduan, dan
+            informasi desa.
+          </p>
+          <button
+            class="bg-orange-500 text-white px-5 py-2 rounded-lg shadow hover:bg-prfrom-primary transition"
+          >
+            Hubungi Kami
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="px-6 md:px-14 mt-16 mx-auto bg-black text-white py-5">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Brand and Description -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">NexDes</h2>
+          <p class="text-gray-400 mb-4 text-sm">
+            PrimeNest is a real estate company with a focus on creating
+            exceptional living spaces and facilitating property transactions.
+            Depending on the location, PrimeNest offers a range of services.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Column 1 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Product</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white text-sm">Features</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Solutions</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Pricing</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Tutorials</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Updates</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Our Company</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white text-sm">Features</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Solutions</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Pricing</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Tutorials</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Updates</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Our Company</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white text-sm">Features</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Solutions</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Pricing</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Tutorials</a></li>
+            <li><a href="#" class="hover:text-white text-sm">Updates</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+        <p class="text-gray-500">&copy; 2024 Dandelion. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = () => {
+        const menu = document.querySelector(".menuDropdown");
+        menu.classList.toggle("hidden");
+      };
+    </script>
+
+    <script>
+      function toggleFaq(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        const icon = document.getElementById(`icon-${index}`);
+
+        if (answer.classList.contains("hidden")) {
+          answer.classList.remove("hidden");
+          icon.textContent = "-";
+        } else {
+          answer.classList.add("hidden");
+          icon.textContent = "+";
+        }
+      }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
